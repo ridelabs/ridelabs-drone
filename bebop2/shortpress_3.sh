@@ -5,6 +5,25 @@
 # how to use: 
 # turn on your bebop2
 # connect to it's wifi
+# upload the script via ftp to 192.168.42.1
+#   ncftp 192.168.42.1
+#   cd /internal_000/Debug/
+#   mput shortpress_3.sh
+# enable telnet: shortpress the power button 4 times
+# put the script in place
+#   telnet 192.168.42.1
+#     mv /data/ftp/internal_000/Debug/shortpress_3.sh /bin/ononebutton/
+#     chmod a+rx /bin/ononebutton/shortpress_3.sh
+# get an OTG (on the go) cable and plug it into your bebop2
+# get a USB thumbdrive and plug it into your OTG cable
+# shortpress the power buton 3 times 
+# you will see 2 or so short flashes to start the copy
+# you will see long blinking while copying each file, with a short pause between files 
+# you will see 2 or so short flashes when it ends
+# if there is a problem you will see 10 or so short flashes
+# There will be a log deposited of the copy in ftp://192.168.42.1/internal_000/Debug/shortpress_3.log
+# We copy file by file and don't delete from the bebop2 until we know that the file made it to the external usb drive
+# therefore you can pull the batter at any time to end the process and you will have moved as much as possible up to that point
 # ---------------------------------------
 
 LOG=/data/ftp/internal_000/Debug/shortpress_3.log
